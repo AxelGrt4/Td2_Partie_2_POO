@@ -15,6 +15,7 @@ public:
     Mystring(int, char*);
     Mystring(const char*);
     Mystring(int);
+    Mystring();
     
     
     //destructeur
@@ -56,6 +57,12 @@ Mystring::Mystring(int pn) {
     for (int i = 0; i < n; i++) {
         tab2[i] = 0;
     }
+}
+
+Mystring::Mystring() {
+    cout << "\nConstructeur par défaut\n";
+    n = 0;
+    tab2 = new char[n];
 }
 
 
@@ -138,5 +145,5 @@ Mystring Mystring::concat(Mystring v) {
 
 int main()
 {
-
+    Mystring s4;
 }
